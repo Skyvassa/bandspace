@@ -1,6 +1,5 @@
 const bands = [ 
     {
-        bandId: '1',
         username: 'test1',
         password: 'test1',
         bandName: 'test1',

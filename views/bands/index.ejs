@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Welcome to Bandspace</h1>
+    <nav>
+        <a href="/bands/signup">Sign Up</a>
+        <a href="/bands/login">Log In</a>
+    </nav>
     <% for (let i = 0; i < bands.length; i++) { %>
         <a href="/bands/profile/<%=bands[i].id%>"><%=bands[i].username %></a>
         <p><%= bands[i].bandName %></p>

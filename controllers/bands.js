@@ -1,7 +1,9 @@
 const Band = require('../models').Band;
 
 const index = (req,res) => {
-    res.render("bands/index.ejs");
+    Band.findAll().then(band => {
+        res.render("bands/index.ejs", {bands: band});
+    })   
 }
 
 const renderNew = (req,res) => {
