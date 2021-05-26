@@ -1,27 +1,55 @@
-const Bands = require('../models/bands');
+const Band = require('../models').Band;
 
-const index = (req, res) => {
-    Bands.findAll().then(bands => {
-        res.render('bands/index.ejs', { bands: bands});
-    })
+const index = (req,res) => {
+    res.render("bands/index.ejs");
 }
 
-const createBand = (req,res) => {
-    Band.create(req,body).then(newUSer => {
+const renderNew = (req,res) => {
+    res.render("bands/signup.ejs", {error: ""});
+}
+
+const postBand = (req,res) => {
+    Band.create(req,body).then(newBand => {
         res.redirect(`/bands/profile/${newBand.id}`);
     })
 }
 
 const show = (req,res) => {
-    for (i=0;i<bands.length;i++){
-        if (bands[i].uuid === req.params.id){
-            res.render('band/profile.ejs', {band:bands[i]});
-        }
-    }
+    Band.findByPk(req.params.index).then(band => {
+        res.render('bands/profile.ejs', { band: band});
+    })
+}
+
+const deleteBand = (req,res) => {
+    Band.destroy({ where: { id: req.params.index}}).then(() => {
+        res.redirect('/bands');
+    })
+}
+
+const showEdit = (req,res) => {
+    Band.findByPk(req.params.index).then(band => {
+        res.render('edit.ejs', {
+            band: band,
+            index: req.params.index,
+        })
+    })
+}
+
+const editBand = (req,res) => {
+    Band.update(req.body, {
+        where: { id: req.params.index },
+        returning: true
+    }).then(band => {
+        res.redirect('/bands/profile/'+req.params.index);
+    })
 }
 
 module.exports = {
     index,
-    createBand,
+    renderNew,
+    postBand,
     show,
+    deleteBand,
+    showEdit,
+    editBand,
 }
