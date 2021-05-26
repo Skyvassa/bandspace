@@ -11,8 +11,8 @@ const renderNew = (req,res) => {
 }
 
 const postBand = (req,res) => {
-    Band.create(req,body).then(newBand => {
-        res.redirect(`/bands/profile/${newBand.id}`);
+    Band.create(req.body).then(newBand => {
+        res.redirect(`/profile/${newBand.id}`);
     })
 }
 

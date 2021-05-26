@@ -4,12 +4,12 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('Bands', [
       {
-        username: 'test1',
-        password: 'test1',
-        bandName: 'test1',
-        genre: 'test1',
-        bandMembers: 'test1',
-        bcLink: 'test1',
+        username: 'usertest',
+        password: 'passtest',
+        bandName: 'bandtest',
+        genre: 'genretest',
+        bandMembers: 'membertest',
+        bcLink: 'linktest',
       },
     ], {});
     /**
