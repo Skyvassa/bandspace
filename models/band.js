@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Band.hasMany(models.Post, { foreignKey: 'bandId'})
     }
   };
   Band.init({
@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     bandName: DataTypes.STRING,
     genre: DataTypes.STRING,
     bandMembers: DataTypes.STRING,
-    bcLink: DataTypes.STRING
+    bcLink: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Band',

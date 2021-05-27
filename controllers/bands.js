@@ -1,4 +1,5 @@
 const Band = require('../models').Band;
+const Post = require('../models').Post;
 
 const index = (req,res) => {
     Band.findAll().then(band => {
@@ -17,9 +18,12 @@ const postBand = (req,res) => {
 }
 
 const show = (req,res) => {
-    Band.findByPk(req.params.index).then(band => {
-        res.render('bands/profile.ejs', { band: band});
-    })
+    Band.findByPk(req.params.index, {
+        include: [Post]
+    }).then(band => {
+        console.log(band);
+        res.render('bands/profile.ejs', { band:band})
+        })
 }
 
 const deleteBand = (req,res) => {

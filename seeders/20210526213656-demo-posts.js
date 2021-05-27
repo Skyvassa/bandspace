@@ -7,6 +7,7 @@ module.exports = {
         text: 'texttest',
         bandName: 'bandtest',
         date: 'datetest',
+        bandId: 1
       },
     ], {});
   },
