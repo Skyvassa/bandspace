@@ -9,7 +9,7 @@ module.exports = {
         bandName: 'bandtest',
         genre: 'genretest',
         bandMembers: 'membertest',
-        bcLink: 'linktest',
+        bcLink: 'https://futureislands.bandcamp.com/album/singles',
       },
     ], {});
     /**

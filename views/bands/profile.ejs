@@ -10,6 +10,7 @@
     <h2>Welcome, <%= band.bandName %></h2>
     <p><%= band.genre %></p>
     <p><%= band.bandMembers %></p>
+    <a href=<%= band.bcLink %>>Link to Discography</a>
     <form action="/bands/profile/<%= band.id %>?_method=DELETE" method="POST">
 		<input type="submit" value="Delete Profile" />
     </form>
