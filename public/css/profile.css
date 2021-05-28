@@ -1,0 +1,22 @@
+body {
+    background: #6a88c6;
+    font-family: 'Squada One', cursive;
+}
+
+#welcome {
+    text-align: center;
+}
+
+body img {
+    max-height: 50%;
+    max-width: 50%;
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+}
