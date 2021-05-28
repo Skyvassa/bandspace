@@ -11,12 +11,13 @@
     <h1>Bandspace</h1>
     <h4>Edit Band Information</h4>
     <form action="/bands/profile/<%= index %>?_method=PUT" method="POST">
-        <input type="text" name="username" value="<%= band.username %>"> <br> </br>
-        <input type="password" name="password" value="<%= band.password %>"> <br> </br>
-        <input type="text" name="bandName" value="<%= band.bandName %>"> <br> </br>
-        <input type="text" name="genre" value="<%= band.genre %>"> <br> </br>
-        <input type="text" name="bandMembers" value="<%= band.bandMembers %>"> <br> </br>
-        <input type="url" name="bcLink" value="<%= band.bcLink %>"> <br> </br>
+        Username: <input type="text" name="username" value="<%= band.username %>"> <br> </br>
+        Password: <input type="password" name="password" value="<%= band.password %>"> <br> </br>
+        Band Name: <input type="text" name="bandName" value="<%= band.bandName %>"> <br> </br>
+        Genre: <input type="text" name="genre" value="<%= band.genre %>"> <br> </br>
+        Band Members: <input type="text" name="bandMembers" value="<%= band.bandMembers %>"> <br> </br>
+        Profile Image Link: <input type="text" name="img" value="<%= band.img %>"> <br> </br>
+        Discography Link: <input type="url" name="bcLink" value="<%= band.bcLink %>"> <br> </br>
         <input type="submit" value="Submit">
     </form>
 </body>

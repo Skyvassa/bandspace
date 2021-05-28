@@ -12,9 +12,6 @@ module.exports = {
       text: {
         type: Sequelize.STRING
       },
-      bandName: {
-        type: Sequelize.STRING
-      },
       date: {
         type: Sequelize.STRING
       },

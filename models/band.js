@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     bandName: DataTypes.STRING,
     genre: DataTypes.STRING,
     bandMembers: DataTypes.STRING,
+    img: DataTypes.STRING,
     bcLink: DataTypes.STRING,
   }, {
     sequelize,

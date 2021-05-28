@@ -23,6 +23,9 @@ module.exports = {
       bandMembers: {
         type: Sequelize.STRING
       },
+      img: {
+        type: Sequelize.STRING
+      },
       bcLink: {
         type: Sequelize.STRING
       },

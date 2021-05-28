@@ -5,7 +5,6 @@ module.exports = {
     await queryInterface.bulkInsert('Posts', [
       {
         text: 'texttest',
-        bandName: 'bandtest',
         date: 'datetest',
         bandId: 1
       },
