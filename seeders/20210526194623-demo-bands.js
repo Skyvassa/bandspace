@@ -6,9 +6,9 @@ module.exports = {
       {
         username: 'usertest',
         password: 'passtest',
-        bandName: 'bandtest',
-        genre: 'genretest',
-        bandMembers: 'membertest',
+        bandName: 'Groove Vendors',
+        genre: 'Like...Groovy Man',
+        bandMembers: 'Groovy Dan, Groovy Phil, and Groovy Steve',
         img: 'https://i.imgur.com/IBn6HZo.png',
         bcLink: 'https://futureislands.bandcamp.com/album/singles',
       },
