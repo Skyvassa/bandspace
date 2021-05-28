@@ -17,6 +17,12 @@ const postBand = (req,res) => {
     })
 }
 
+const postPost = (req,res) => {
+    Post.create(req.body).then(newPost => {
+        res.redirect(`/bands/profile/${band.id}`);
+    })
+}
+
 const show = (req,res) => {
     Band.findByPk(req.params.index, {
         include: [Post]
@@ -54,6 +60,7 @@ module.exports = {
     index,
     renderNew,
     postBand,
+    postPost,
     show,
     deleteBand,
     showEdit,

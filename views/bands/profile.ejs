@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
+    <h1>Bandspace</h1>
     <h2>Welcome, <%= band.bandName %></h2>
     <p><%= band.genre %></p>
     <p><%= band.bandMembers %></p>
@@ -15,16 +17,17 @@
         <p><%= band.Posts[i].text %></p>
       <% } %>
       <br> </br>
+    <form action="/bands/profile/<%= band.id %>" method="POST">
+    <input type="text" name="text" placeholder="Post Text">
+    <input type="submit" value="Submit Post">
+    </form> <br> </br>
     <form action="/bands/profile/<%= band.id %>?_method=DELETE" method="POST">
 		<input type="submit" value="Delete Profile" />
-    </form>
+    </form> <br> </br>
+    <a href="/bands/<%= band.id %>/edit">Edit</a>
 </body>
 </html>
 
-<!-- bandId: '',
-username: '',
-password: '',
-bandName: '',
-genre: '',
-bandMembers: '',
-bcLink: '', -->
+<!-- text: 'texttest',
+bandName: 'bandtest',
+date: 'datetest', -->
