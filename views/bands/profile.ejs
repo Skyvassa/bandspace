@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Bandspace</title>
     <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
     <a href=<%= band.bcLink %>>Link to Discography</a>
     <p><u>Post History:</u> 
       <% for (let i=0; i < band.Posts.length; i++) { %>
-        <p><%= band.Posts[i].text %></p>
+        <p id='posts'><%= band.Posts[i].text %></p>
       <% } %>
     </p>
     <br> </br>
