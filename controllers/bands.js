@@ -20,7 +20,7 @@ const postBand = (req,res) => {
 const postPost = (req,res) => {
     Post.create(req.body).then(newPost => {
         console.log(newPost)
-        res.redirect(`/bands/profile/${newPost.id}`);
+        res.redirect(`/bands/profile/${req.body.bandId}`);
     })
 }
 

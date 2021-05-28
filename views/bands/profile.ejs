@@ -25,8 +25,9 @@
       <% } %>
     </p>
     <br> </br>
-    <form action="/bands/profile/<%= band.id %>?_method=PUT" method="POST">
+    <form action="/bands/profile/<%= band.id %>" method="POST">
       <input type="text" name="text" placeholder="Post Text">
+      <input type="hidden" name="bandId" value="<%= band.id %>">
       <input type="submit" value="Submit Post">
     </form> <br> </br>
   </main>

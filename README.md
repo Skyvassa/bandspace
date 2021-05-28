@@ -11,9 +11,11 @@ Bandspace is the next generation of local music social media, where bands that m
 ## Exisiting Features
 * Create Band Account
 * View Band Account Information + Posts
+* Submit text posts from the Band
 * Edit Band Profile
 * Delete Band Profile
 ## Planned Features
 * Search Functionality
-* Associated Bands List
+* Dates and Image functionality for Posts
+* Friends list
 * Fan Account Creation - to create a list of bands to follow under one user account
