@@ -40,7 +40,7 @@ const deleteBand = (req,res) => {
 
 const showEdit = (req,res) => {
     Band.findByPk(req.params.index).then(band => {
-        res.render('edit.ejs', {
+        res.render('bands/edit.ejs', {
             band: band,
             index: req.params.index,
         })
