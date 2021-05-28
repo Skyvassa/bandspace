@@ -19,7 +19,8 @@ const postBand = (req,res) => {
 
 const postPost = (req,res) => {
     Post.create(req.body).then(newPost => {
-        res.redirect(`/bands/profile/${band.id}`);
+        console.log(newPost)
+        res.redirect(`/bands/profile/${newPost.id}`);
     })
 }
 
@@ -27,7 +28,6 @@ const show = (req,res) => {
     Band.findByPk(req.params.index, {
         include: [Post]
     }).then(band => {
-        console.log(band);
         res.render('bands/profile.ejs', { band:band})
         })
 }

@@ -5,7 +5,7 @@ const ctrl = require('../controllers');
 router.get('/', ctrl.bands.index);
 router.get('/signup', ctrl.bands.renderNew);
 router.post('/', ctrl.bands.postBand);
-router.post('/', ctrl.bands.postPost);
+router.post('/profile/:index', ctrl.bands.postPost);
 router.delete('/profile/:index', ctrl.bands.deleteBand);
 router.get('/profile/:index/edit', ctrl.bands.showEdit);
 router.put('/profile/:index', ctrl.bands.editBand);
