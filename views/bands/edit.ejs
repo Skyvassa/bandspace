@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    <h1>Bandspace</h1>
+    <a href=<%= "/bands/" %> style="text-decoration : none; color: #000000;"><h1>Bandspace</h1></a>
     <h4>Edit Band Information</h4>
     <form action="/bands/profile/<%= index %>?_method=PUT" method="POST">
         Username: <input type="text" name="username" value="<%= band.username %>"> <br> </br>

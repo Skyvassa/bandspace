@@ -1,5 +1,6 @@
 # Bandspace
 Bandspace is the next generation of local music social media, where bands that might get lost in the wash of the overwhelming social media presence of national groups can get access to local music fans in one easy to search website.
+![Screenshot of Profile Page](https://i.imgur.com/QLHz92r.png)
 ## Technologies Used
 * Express
 * Sequelize
